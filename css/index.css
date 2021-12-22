@@ -8,7 +8,7 @@
     -webkit-animation: 30s moveBg infinite linear; */
 }
 #main .slider{
-    overflow: hidden;
+    overflow: hidden; 
 }
 #main .slider .slide{
     height: 400px;
