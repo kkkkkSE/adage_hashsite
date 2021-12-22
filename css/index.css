@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+#main{
+    width: 100%; height: 400px;
+    background-color: #555;
+    background-size: cover;
+    /* animation: 30s moveBg infinite linear;
+    -webkit-animation: 30s moveBg infinite linear; */
+}
+#main .slider{
+    overflow: hidden;
+}
+#main .slider .slide{
+    height: 400px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#main .slick-arrow{
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    background-size: contain;
+    background-position: 50% 50%;
+    transition: left 0.5s, right 0.5s;
+    -webkit-transition: left 0.5s, right 0.5s;
+    -moz-transition: left 0.5s, right 0.5s;
+    -ms-transition: left 0.5s, right 0.5s;
+    -o-transition: left 0.5s, right 0.5s;
+    opacity: 1;
+}
+#main .slick-arrow:hover{
+    opacity: 1;
+}
+
+#main .slick-prev{
+    left: -50px;
+    z-index: 10;
+    background-image: url(../img/left_arrow.svg);
+    filter: invert(100);
+    -webkit-filter: invert(100);
+}
+#main .slick-next{
+    right: -50px;
+    z-index: 10;
+    background-image: url(../img/right_arrow.svg);
+    filter: invert(100);
+    -webkit-filter: invert(100);
+}
+
+#main:hover .slick-prev{
+    left: 25px;
+    background-image: url(../img/left_arrow.svg);
+}
+#main:hover .slick-next{
+    right: 25px;
+    background-image: url(../img/right_arrow.svg);
+}
+#main .slick-prev:before{content: "";}
+#main .slick-next:before{content: "";}
+
+
+#main .slick-dots{
+    bottom: 25px;
+}
+#main .slick-dots li{
+    width: 40px;
+    height: 2px;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -ms-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+#main .slick-dots li button{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#main .slick-dots li.slick-active{
+    width: 70px;
+}
+#main .slick-dots li.slick-active button{
+    background-color: #f90;
+}
+#main .slick-dots li button:before{
+    content: "";
+}
+
+
+/* @keyframes moveBg{
+    0%{background-position: 50% 0;}
+    50%{background-position: 50% 100%;}
+    100%{background-position: 50% 0;}
+} */
+
+section{padding: 80px 0 60px;}
+section .wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+section .wrap .title{
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+    display: flex; justify-content: space-between;
+    align-items: flex-end;
+}
+section .wrap .title h3{
+    font-size: 24px; color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+section .wrap .title a{
+    display: block;
+    font-size: 14px; color: #ff7;
+    text-transform: capitalize;
+}
+section .wrap .title a:hover{
+    color: #fa0;
+}
+
+
+section .wrap .cont{
+    padding: 20px 0;
+    display: flex; flex-wrap: wrap;
+    margin-left: -10px; margin-right: -10px;
+}
+section .wrap .cont > div{
+    width: calc(50% - 20px); height: 300px;
+    margin: 0 10px 20px;
+    background-color: #555;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
